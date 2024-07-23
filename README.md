@@ -1,5 +1,8 @@
 ```markdown
 
+# Author: YASH RATNAPARKHI (g23ai2109)
+
+
 # Docker Application Deployment
 
 ## Step 1: Deploy a Sample Web Application Using Docker Containers
@@ -44,8 +47,8 @@ sudo docker pull mysql
 #List docker images
 docker images
 
-# 1. Create any container name (eg. student_db) 
-# 2. Use any port for mysql to run (eg. 3306:3306) 
+# 1. Create any container name (eg. student_db)
+# 2. Use any port for mysql to run (eg. 3306:3306)
 # 3. -v Provide the volume path to persist data.
 # 4. -d Run the container in detach mode.
 # 5. -e "MYSQL_ROOT_PASSWORD=root", Sets the root password of mysql to "root".
@@ -55,6 +58,9 @@ docker run --name student_db  -p 3306:3306 -v mysql_volume: /var/lib/mysql/ -d -
 
 # Check Running Containers
 sudo docker ps
+
+# To Start the container 
+sudo start [container_id]
 
 # Access the mysql containers
 sudo docker exec -it student_db bash
@@ -117,5 +123,16 @@ Open a web browser and navigate to `http://localhost:8080` to see the PHP applic
 
 
 
+### Reference images
 
+1. When the user fills the data
+![alt text](web-app-form-data.png)
+
+
+2. User Named IITJ User , BTECH, IIT JODHPUR is added.
+
+![alt text](alert-1.png)
+
+2. After the user Fills the data, the record is updated to the database and the user is visible in records.
+![alt text](webapp-form-submission.png)
 
